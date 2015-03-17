@@ -241,10 +241,10 @@ Jira.verifyTicketOnDev = function(ticket) {
   Jira.makePostRequest(url, data);
 };
 
-if (Meteor.isServer) {
-  Meteor.startup(function() {
-    Jira.updateMilestoneCollection();
-    Meteor.call('setDefaultMilestone');
-    Meteor.setInterval(Jira.fetchLatestChanges, 30000);
-  });
-}
+// if (Meteor.isServer) {
+//   Meteor.startup(function() {
+//     Jira.updateMilestoneCollection();
+//     Meteor.call('setDefaultMilestone');
+//     Meteor.setInterval(Jira.fetchLatestChanges, 30000);
+//   });
+// }
